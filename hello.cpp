@@ -15,5 +15,8 @@ int main()
     // students+=1;
     // std::cout << students;
     double x =  3.1415;
-    std::cout << x;
+    int correct = 8;
+    int questions =10;
+    double score = correct/(double)questions * 100;
+    std::cout << score <<"%";
 }
