@@ -1,17 +1,19 @@
 #include <iostream>
-namespace first
-{
-    int x = 1;
-}
-namespace second
-{
-    int x = 2;
-}
+// #include <vector>
+// typedef std::string text_t;
+// using text_t = std::string;
 int main()
 {
-    const double PI = 3.14159;
-    double radius = 5.0;
-    double area = PI * radius * radius;
-    std::cout << "The area of the circle is " << area << std::endl;
-    return 0;
+    // using std ::cout;
+    // using std ::string;
+    // string name = " Raktim";
+    // cout << "hello" << name;
+    // text_t name = "raktim";
+    // std::cout << name;
+    // return 0;
+    // int students = 10;
+    // students+=1;
+    // std::cout << students;
+    double x =  3.1415;
+    std::cout << x;
 }
