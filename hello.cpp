@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 // #include <vector>
 // typedef std::string text_t;
 // using text_t = std::string;
@@ -30,5 +31,12 @@ int main()
     // std::cin.ignore();
     // std::cout << "Hello " << name << '\n';
     // std::cout << "you are " << age << " years old";
-
+    // Hypotenuse
+    double a, b, c;
+    std::cout << "Enter the first number:";
+    std::cin >> a;
+    std::cout << "Enter the second number";
+    std::cin >> b;
+    c = sqrt(pow(a, 2) + pow(b, 2));
+    std::cout << "Your answer is:" << c;
 }
