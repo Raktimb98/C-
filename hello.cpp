@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 // #include <vector>
 // typedef std::string text_t;
 // using text_t = std::string;
@@ -14,9 +15,20 @@ int main()
     // int students = 10;
     // students+=1;
     // std::cout << students;
-    double x =  3.1415;
-    int correct = 8;
-    int questions =10;
-    double score = correct/(double)questions * 100;
-    std::cout << score <<"%";
+    // double x =  3.1415;
+    // int correct = 8;
+    // int questions =10;
+    // double score = correct/(double)questions * 100;
+    // std::cout << score <<"%";
+    // another
+    // std::string name;
+    // std::cout << "What's your full name ?:";
+    // std::getline(std::cin >>std::ws,name);
+    // int age;
+    // std::cout << "What is your age:";
+    // std::cin >> age;
+    // std::cin.ignore();
+    // std::cout << "Hello " << name << '\n';
+    // std::cout << "you are " << age << " years old";
+
 }
