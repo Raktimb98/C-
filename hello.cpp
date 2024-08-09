@@ -32,11 +32,31 @@ int main()
     // std::cout << "Hello " << name << '\n';
     // std::cout << "you are " << age << " years old";
     // Hypotenuse
-    double a, b, c;
-    std::cout << "Enter the first number:";
-    std::cin >> a;
-    std::cout << "Enter the second number";
-    std::cin >> b;
-    c = sqrt(pow(a, 2) + pow(b, 2));
-    std::cout << "Your answer is:" << c;
+    // double a, b, c;
+    // std::cout << "Enter the first number:";
+    // std::cin >> a;
+    // std::cout << "Enter the second number";
+    // std::cin >> b;
+    // c = sqrt(pow(a, 2) + pow(b, 2));
+    // std::cout << "Your answer is:" << c;
+    // switches
+    int month;
+    std::cout<< "Enter a number between 1-12:-";
+    std::cin >> month;
+    switch (month)
+    {
+    case 1:
+        std::cout << "It's january";
+        break;
+    case 2:
+        std::cout << "It's february";
+        break;
+    case 3:
+        std::cout << "It's something";
+        break;
+    
+    default:
+        std::cout << "It's not a month";
+        break;
+    }
 }
