@@ -1,27 +1,27 @@
 #include <iostream>
 #include <ctime>
 int main() {
-    srand(time(0));
-    int randnum = (rand() %5)+1;
-    switch (randnum)
-    {
-    case 1:
-        std::cout << "Time to order foods";
-        break;
-    case 2:
-        std::cout << "Time to sleep";
-        break;
-    case 3:
-        std::cout << "Time to exercise";
-        break;
-    case 4:
-        std::cout << "Time to relax";
-        break;
-    case 5:
-        std::cout << "Time to study";
-        break;
-    default: std::cout << "Somethig went wrong";
-        break;
-    };
+    int num;
+    int guess;
+    int tries;
+    srand(time(NULL));
+    num = (rand() % 100) +1;
+    do{
+        std::cout << "Enter a guess (between 1 to 100):";
+        std::cin >> guess;
+        tries++;
+        if(guess > num){
+            std::cout << "Too high!";
+        }
+        else if (guess<num)
+        {
+            std::cout << "Too low!";
+        }
+        else{
+            std::cout << "Correct , Number of tries:" << tries << '\n';
+        }
+        
+    }
+    while(guess!=num);
     return 0;
 }
