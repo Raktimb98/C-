@@ -1,21 +1,27 @@
 #include <iostream>
-#include <string>
+#include <ctime>
 int main() {
-    int rows,columns;
-    char symbol;
-    std::cout << "How many rows do you want? :";
-    std::cin >> rows;
-    std::cout << "How many columns do you want? :";
-    std::cin >> columns;
-    std::cout << "Enter a symbol:";
-    std::cin >> symbol;
-
-    for(int i=1; i<=rows;i++){
-        for(int j=1; j<=columns;j++){
-            std::cout << symbol;
-        }
-        std::cout<<'\n';
-    }
-
+    srand(time(0));
+    int randnum = (rand() %5)+1;
+    switch (randnum)
+    {
+    case 1:
+        std::cout << "Time to order foods";
+        break;
+    case 2:
+        std::cout << "Time to sleep";
+        break;
+    case 3:
+        std::cout << "Time to exercise";
+        break;
+    case 4:
+        std::cout << "Time to relax";
+        break;
+    case 5:
+        std::cout << "Time to study";
+        break;
+    default: std::cout << "Somethig went wrong";
+        break;
+    };
     return 0;
 }
