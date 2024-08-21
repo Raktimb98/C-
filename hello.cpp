@@ -1,71 +1,79 @@
 #include <iostream>
-#include <iomanip>
+#include <ctime>
 
-void showBalance(double balance);
-double deposit();
-double withdraw(double balance);
+char getUserChoice();
+char getComputerChoice();
+void showChoice(char choice);
+void chooseWinner(char player, char computer);
 
 int main()
 {
-    double balance = 0;
-    int choice = 0;
+    srand(time(0));  // Seed the random number generator once
 
-    do
-    {
-        std::cout << "Enter your choice:\n";
-        std::cout << "1. Show balance:\n";
-        std::cout << "2. Deposit money:\n";
-        std::cout << "3. Withdraw money:\n";
-        std::cout << "4. Exit\n";
-        std::cin >> choice;  // Move this inside the loop
+    char player = getUserChoice();
+    std::cout << "Your choice is: ";
+    showChoice(player);
 
-        switch (choice)
-        {
-        case 1:
-            showBalance(balance);
-            break;
-        case 2:
-            balance += deposit();
-            break;
-        case 3:
-            balance -= withdraw(balance);
-            break;
-        case 4:
-            std::cout << "Thank you for being our customer!\n";
-            break;
-        default:
-            std::cout << "Something went wrong\n";
-            break;
-        }
-    } while (choice != 4);
+    char computer = getComputerChoice();
+    std::cout << "\nComputer's choice is: ";
+    showChoice(computer);
+
+    chooseWinner(player, computer);
 
     return 0;
 }
 
-void showBalance(double balance)
+char getUserChoice()
 {
-    std::cout << "Your balance is ₹" << std::setprecision(2) << std::fixed << balance << '\n';
-}
-
-double deposit()
-{
-    double amount = 0;
-    std::cout << "Enter the amount that you want to deposit: ";
-    std::cin >> amount;
-    return amount;  // Return the amount deposited
-}
-
-double withdraw(double balance)
-{
-    double amount = 0;
-    std::cout << "Enter the amount that you want to withdraw: ";
-    std::cin >> amount;
-
-    if(amount > balance)
+    char player;
+    std::cout << "Choose one of them\n";
+    do
     {
-        std::cout << "Insufficient funds!\n";
-        return 0;  // If insufficient funds, return 0
-    }
+        std::cout << "'r' for Rock, 'p' for Paper, 's' for Scissors: ";
+        std::cin >> player;
+    } while (player != 'r' && player != 'p' && player != 's');
+    return player;
+}
 
-    return amount;  // Return the amount withdrawn
+char getComputerChoice()
+{
+    int num = rand() % 3;
+    return (num == 0) ? 'r' : (num == 1) ? 'p' : 's';
+}
+
+void showChoice(char choice)
+{
+    switch (choice)
+    {
+    case 'r':
+        std::cout << "Rock";
+        break;
+    case 'p':
+        std::cout << "Paper";
+        break;
+    case 's':
+        std::cout << "Scissors";
+        break;
+    default:
+        std::cout << "Invalid choice!";
+        break;
+    }
+}
+
+void chooseWinner(char player, char computer)
+{
+    if (player == computer)
+    {
+        std::cout << "\nIt's a tie!\n";
+    }
+    else if ((player == 'r' && computer == 's') ||
+             (player == 'p' && computer == 'r') ||
+             (player == 's' && computer == 'p'))
+    {
+        std::cout << "\nYou win!\n";
+    }
+    else
+    {
+        std::cout << "\nYou lose!\n";
+    }
 }
