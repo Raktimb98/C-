@@ -16,3 +16,11 @@
 
 //     return 0;
 // }
+//foreach loop
+#include <iostream>
+int main(){
+    std::string food[] = {"Egg chicken roll", "Paneer tikka", "Garlic naan" , "Fried rice"};
+    for (std::string food: food){
+        std::cout << food << '\n';
+    }
+}
