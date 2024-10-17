@@ -105,18 +105,37 @@
 // }
 
 // Fill() function
+// #include <iostream>
+// int main()
+// {
+//     const int size = 150;
+//     std::string foods[size];
+//     fill(foods, foods + (size / 2), "Raktim");
+//     fill(foods + (size / 2), foods + size, "Biswas");
+
+//     for (std::string items : foods)
+//     {
+//         std::cout << items << '\n';
+//     }
+
+//     return 0;
+// }
+
+//Input data in array
 #include <iostream>
-int main()
-{
-    const int size = 150;
-    std::string foods[size];
-    fill(foods, foods + (size / 2), "Raktim");
-    fill(foods + (size / 2), foods + size, "Biswas");
-
-    for (std::string items : foods)
+#include <string>
+int main(){
+    std::string items[5];
+    int size = sizeof(items)/sizeof(items[0]);
+    // std::cin.ignore();
+    for (int i = 0; i < size; i++)
     {
-        std::cout << items << '\n';
+        std::cout<<"Enter a item " << i+1 <<" : ";
+        std::getline(std::cin,items[i]);
     }
-
+    std::cout<<"Your items are:\n";
+    for(std::string item : items){
+        std::cout<<item<<'\n';
+    }
     return 0;
 }
