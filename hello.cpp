@@ -140,18 +140,30 @@
 //      return 0;
 //  }
 // 2D array
-#include<iostream>
-int main(){
-    std::string foods [][3]={{"India" , "Garlic nan" , "Butter chicken"},
-                            {"Japan"  , "Sushi" , "Ramen"},
-                            {"USA" , "KFC" , "MC"}};
-    std::cout<< foods[0][0]<<" ";
-    std::cout<< foods[0][1]<<" ";
-    std::cout<< foods[0][2]<<" \n";
-    std::cout<< foods[1][0]<<" ";
-    std::cout<< foods[1][1]<<" ";
-    std::cout<< foods[1][2]<<" \n";
-    std::cout<< foods[2][0]<<" ";
-    std::cout<< foods[2][1]<<" ";
-    std::cout<< foods[2][2]<<" \n";
+#include <iostream>
+int main()
+{
+    std::string foods[][3] = {{"India", "Garlic nan", "Butter chicken"},
+                              {"Japan", "Sushi", "Ramen"},
+                              {"USA", "KFC", "MC"}};
+    // std::cout<< foods[0][0]<<" ";
+    // std::cout<< foods[0][1]<<" ";
+    // std::cout<< foods[0][2]<<" \n";
+    // std::cout<< foods[1][0]<<" ";
+    // std::cout<< foods[1][1]<<" ";
+    // std::cout<< foods[1][2]<<" \n";
+    // std::cout<< foods[2][0]<<" ";
+    // std::cout<< foods[2][1]<<" ";
+    // std::cout<< foods[2][2]<<" \n";
+    int rows = sizeof(foods) / sizeof(foods[0]);
+    int columns = sizeof(foods[0]) / sizeof(foods[0][0]);
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            std::cout << foods[i][j] << "           ";
+        }
+        std::cout << "\n";
+    }
+    return 0;
 }
