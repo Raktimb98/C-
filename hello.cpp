@@ -121,21 +121,37 @@
 //     return 0;
 // }
 
-//Input data in array
-#include <iostream>
-#include <string>
+// Input data in array
+//  #include <iostream>
+//  #include <string>
+//  int main(){
+//      std::string items[5];
+//      int size = sizeof(items)/sizeof(items[0]);
+//       std::cin.ignore();
+//      for (int i = 0; i < size; i++)
+//      {
+//          std::cout<<"Enter a item " << i+1 <<" : ";
+//          std::getline(std::cin,items[i]);
+//      }
+//      std::cout<<"Your items are:\n";
+//      for(std::string item : items){
+//          std::cout<<item<<'\n';
+//      }
+//      return 0;
+//  }
+// 2D array
+#include<iostream>
 int main(){
-    std::string items[5];
-    int size = sizeof(items)/sizeof(items[0]);
-    // std::cin.ignore();
-    for (int i = 0; i < size; i++)
-    {
-        std::cout<<"Enter a item " << i+1 <<" : ";
-        std::getline(std::cin,items[i]);
-    }
-    std::cout<<"Your items are:\n";
-    for(std::string item : items){
-        std::cout<<item<<'\n';
-    }
-    return 0;
+    std::string foods [][3]={{"India" , "Garlic nan" , "Butter chicken"},
+                            {"Japan"  , "Sushi" , "Ramen"},
+                            {"USA" , "KFC" , "MC"}};
+    std::cout<< foods[0][0]<<" ";
+    std::cout<< foods[0][1]<<" ";
+    std::cout<< foods[0][2]<<" \n";
+    std::cout<< foods[1][0]<<" ";
+    std::cout<< foods[1][1]<<" ";
+    std::cout<< foods[1][2]<<" \n";
+    std::cout<< foods[2][0]<<" ";
+    std::cout<< foods[2][1]<<" ";
+    std::cout<< foods[2][2]<<" \n";
 }
