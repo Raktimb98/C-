@@ -194,15 +194,28 @@
 // }
 
 //Const parameter
+// #include<iostream>
+// void printInfo(const std::string name,const int age);
+// int main(){
+//     std::string name = "Raktim";
+//     int age = 19;
+//     printInfo(name,age);
+//     return 0;
+// }
+// void printInfo(const std::string name,const int age){
+//     std::cout<< "Name: "<< name <<'\n';
+//     std::cout<< "Age: "<< age <<'\n';
+// }
+//Pointer
 #include<iostream>
-void printInfo(const std::string name,const int age);
 int main(){
+    //'&' address of operator
+    //'*' dereference operator
     std::string name = "Raktim";
-    int age = 19;
-    printInfo(name,age);
+    std::string *pName = &name;
+    // std::cout << pName;
+    // To access the address of the variable
+    std::cout << *pName;
+    // To access the value of the variable
     return 0;
-}
-void printInfo(const std::string name,const int age){
-    std::cout<< "Name: "<< name <<'\n';
-    std::cout<< "Age: "<< age <<'\n';
 }
