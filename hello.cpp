@@ -146,15 +146,15 @@
 //     std::string foods[][3] = {{"India", "Garlic nan", "Butter chicken"},
 //                               {"Japan", "Sushi", "Ramen"},
 //                               {"USA", "KFC", "MC"}};
-    // std::cout<< foods[0][0]<<" ";
-    // std::cout<< foods[0][1]<<" ";
-    // std::cout<< foods[0][2]<<" \n";
-    // std::cout<< foods[1][0]<<" ";
-    // std::cout<< foods[1][1]<<" ";
-    // std::cout<< foods[1][2]<<" \n";
-    // std::cout<< foods[2][0]<<" ";
-    // std::cout<< foods[2][1]<<" ";
-    // std::cout<< foods[2][2]<<" \n";
+// std::cout<< foods[0][0]<<" ";
+// std::cout<< foods[0][1]<<" ";
+// std::cout<< foods[0][2]<<" \n";
+// std::cout<< foods[1][0]<<" ";
+// std::cout<< foods[1][1]<<" ";
+// std::cout<< foods[1][2]<<" \n";
+// std::cout<< foods[2][0]<<" ";
+// std::cout<< foods[2][1]<<" ";
+// std::cout<< foods[2][2]<<" \n";
 //     int rows = sizeof(foods) / sizeof(foods[0]);
 //     int columns = sizeof(foods[0]) / sizeof(foods[0][0]);
 //     for (int i = 0; i < rows; i++)
@@ -168,54 +168,70 @@
 //     return 0;
 // }
 
-//Memory address
-// #include<iostream>
-// int main(){
-//     int num = 98;
-//     std::cout<< &num <<'\n';
-//     return 0;
-// }
+// Memory address
+//  #include<iostream>
+//  int main(){
+//      int num = 98;
+//      std::cout<< &num <<'\n';
+//      return 0;
+//  }
 
-//Swap two values using memory address
-// #include<iostream>
-// void swap(int &num1,int &num2);
-// int main(){
-//     int num1 = 10;
-//     int num2 = 20;
-//     swap(num1,num2);
-//     std::cout<< "num1:"<<num1 << '\n';
-//     std::cout<< "num2:"<<num2;
-//     return 0;
-// }
-// void swap(int &num1,int &num2){
-//     int temp = num1;
-//     num1 = num2;
-//     num2 = temp;
-// }
+// Swap two values using memory address
+//  #include<iostream>
+//  void swap(int &num1,int &num2);
+//  int main(){
+//      int num1 = 10;
+//      int num2 = 20;
+//      swap(num1,num2);
+//      std::cout<< "num1:"<<num1 << '\n';
+//      std::cout<< "num2:"<<num2;
+//      return 0;
+//  }
+//  void swap(int &num1,int &num2){
+//      int temp = num1;
+//      num1 = num2;
+//      num2 = temp;
+//  }
 
-//Const parameter
-// #include<iostream>
-// void printInfo(const std::string name,const int age);
-// int main(){
-//     std::string name = "Raktim";
-//     int age = 19;
-//     printInfo(name,age);
-//     return 0;
+// Const parameter
+//  #include<iostream>
+//  void printInfo(const std::string name,const int age);
+//  int main(){
+//      std::string name = "Raktim";
+//      int age = 19;
+//      printInfo(name,age);
+//      return 0;
+//  }
+//  void printInfo(const std::string name,const int age){
+//      std::cout<< "Name: "<< name <<'\n';
+//      std::cout<< "Age: "<< age <<'\n';
+//  }
+// Pointer
+//  #include<iostream>
+//  int main(){
+//'&' address of operator
+//'*' dereference operator
+//  std::string name = "Raktim";
+//  std::string *pName = &name;
+//  std::cout << pName;
+//  To access the address of the variable
+//  std::cout << *pName;
+//  To access the value of the variable
+//  return 0;
 // }
-// void printInfo(const std::string name,const int age){
-//     std::cout<< "Name: "<< name <<'\n';
-//     std::cout<< "Age: "<< age <<'\n';
-// }
-//Pointer
-#include<iostream>
-int main(){
-    //'&' address of operator
-    //'*' dereference operator
-    std::string name = "Raktim";
-    std::string *pName = &name;
-    // std::cout << pName;
-    // To access the address of the variable
-    std::cout << *pName;
-    // To access the value of the variable
+// Null Pointer
+#include <iostream>
+int main()
+{
+    int *pointer = nullptr;
+    int x = 123;
+    // pointer = &x;
+    if (pointer == nullptr)
+    {
+        std::cout << "Address was't assigned" ;
+    }
+    else{
+        std::cout<< "Address was assigned";
+    }
     return 0;
 }
