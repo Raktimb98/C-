@@ -237,13 +237,33 @@
 // }
 
 // Dynamic memory allocation
+// #include <iostream>
+// int main(){
+//     int *pNum = NULL;
+//     pNum = new int;
+//     *pNum = 123;
+//     std::cout<< "Address:" << pNum <<'\n';
+//     std::cout<< "Value:" << *pNum;
+//     delete pNum;
+//     return 0;
+// }
+// an example of dynamic memory allocation
 #include <iostream>
 int main(){
-    int *pNum = NULL;
-    pNum = new int;
-    *pNum = 123;
-    std::cout<< "Address:" << pNum <<'\n';
-    std::cout<< "Value:" << *pNum;
-    delete pNum;
-    return 0;
+    char *pGrades = NULL;
+    std::cout<<"How many grades do you want to enter?";
+    int size;
+    std::cin>>size;
+    pGrades = new char[size];
+    for (int i = 0; i < size; i++)
+    {
+        std::cout<<"Enter grade #"<<i+1<<":";
+        std::cin>>pGrades[i];
+    }
+    for (int i = 0; i < size; i++)
+    {
+        std::cout <<pGrades[i]<< '\n';
+    }
+    delete[] pGrades;
+    
 }
