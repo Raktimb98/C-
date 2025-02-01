@@ -244,5 +244,6 @@ int main(){
     *pNum = 123;
     std::cout<< "Address:" << pNum <<'\n';
     std::cout<< "Value:" << *pNum;
+    delete pNum;
     return 0;
 }
