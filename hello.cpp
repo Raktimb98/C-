@@ -220,18 +220,29 @@
 //  return 0;
 // }
 // Null Pointer
+// #include <iostream>
+// int main()
+// {
+//     int *pointer = nullptr;
+//     int x = 123;
+//     // pointer = &x;
+//     if (pointer == nullptr)
+//     {
+//         std::cout << "Address was't assigned" ;
+//     }
+//     else{
+//         std::cout<< "Address was assigned";
+//     }
+//     return 0;
+// }
+
+// Dynamic memory allocation
 #include <iostream>
-int main()
-{
-    int *pointer = nullptr;
-    int x = 123;
-    // pointer = &x;
-    if (pointer == nullptr)
-    {
-        std::cout << "Address was't assigned" ;
-    }
-    else{
-        std::cout<< "Address was assigned";
-    }
+int main(){
+    int *pNum = NULL;
+    pNum = new int;
+    *pNum = 123;
+    std::cout<< "Address:" << pNum <<'\n';
+    std::cout<< "Value:" << *pNum;
     return 0;
 }
