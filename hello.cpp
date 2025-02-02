@@ -269,15 +269,30 @@
 // }
 
 //Recursion
+// #include <iostream>
+// void walk(int steps);
+// int main(){
+//     walk(100);
+//     return 0;
+// }
+// void walk(int steps){
+//     if(steps > 0){
+//         std::cout << "You just take a step !\n";
+//         walk(steps -1);
+//     }
+// }
+//An example of Recursion
 #include <iostream>
-void walk(int steps);
+int factorial(int num);
 int main(){
-    walk(100);
+std::cout<<factorial(10);
     return 0;
 }
-void walk(int steps){
-    if(steps > 0){
-        std::cout << "You just take a step !\n";
-        walk(steps -1);
+int factorial(int num){
+    int result = 1;
+    for (int i = 1; i <= num; i++)
+    {
+        result = result * i;
     }
+    return result;
 }
