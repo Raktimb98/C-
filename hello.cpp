@@ -248,22 +248,36 @@
 //     return 0;
 // }
 // an example of dynamic memory allocation
-#include <iostream>
-int main(){
-    char *pGrades = NULL;
-    std::cout<<"How many grades do you want to enter?";
-    int size;
-    std::cin>>size;
-    pGrades = new char[size];
-    for (int i = 0; i < size; i++)
-    {
-        std::cout<<"Enter grade #"<<i+1<<":";
-        std::cin>>pGrades[i];
-    }
-    for (int i = 0; i < size; i++)
-    {
-        std::cout <<pGrades[i]<< '\n';
-    }
-    delete[] pGrades;
+// #include <iostream>
+// int main(){
+//     char *pGrades = NULL;
+//     std::cout<<"How many grades do you want to enter?";
+//     int size;
+//     std::cin>>size;
+//     pGrades = new char[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         std::cout<<"Enter grade #"<<i+1<<":";
+//         std::cin>>pGrades[i];
+//     }
+//     for (int i = 0; i < size; i++)
+//     {
+//         std::cout <<pGrades[i]<< '\n';
+//     }
+//     delete[] pGrades;
     
+// }
+
+//Recursion
+#include <iostream>
+void walk(int steps);
+int main(){
+    walk(100);
+    return 0;
+}
+void walk(int steps){
+    if(steps > 0){
+        std::cout << "You just take a step !\n";
+        walk(steps -1);
+    }
 }
