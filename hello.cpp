@@ -282,17 +282,28 @@
 //     }
 // }
 //An example of Recursion
+// #include <iostream>
+// int factorial(int num);
+// int main(){
+// std::cout<<factorial(10);
+//     return 0;
+// }
+// int factorial(int num){
+//     int result = 1;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         result = result * i;
+//     }
+//     return result;
+// }
+
+//Function template
 #include <iostream>
-int factorial(int num);
-int main(){
-std::cout<<factorial(10);
-    return 0;
+template <typename Thing>
+Thing max(Thing x,Thing y){
+    return (x > y) ? x : y;
 }
-int factorial(int num){
-    int result = 1;
-    for (int i = 1; i <= num; i++)
-    {
-        result = result * i;
-    }
-    return result;
+int main(){
+    std::cout<<max('A','B')<<'\n';
+    return 0;
 }
