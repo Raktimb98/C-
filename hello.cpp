@@ -298,12 +298,38 @@
 // }
 
 //Function template
+// #include <iostream>
+// template <typename Thing>
+// Thing max(Thing x,Thing y){
+//     return (x > y) ? x : y;
+// }
+// int main(){
+//     std::cout<<max('A','B')<<'\n';
+//     return 0;
+// }
+
+// Struct
 #include <iostream>
-template <typename Thing>
-Thing max(Thing x,Thing y){
-    return (x > y) ? x : y;
-}
+struct Student{
+    std::string name;
+    int age;
+    double gpa;
+};
 int main(){
-    std::cout<<max('A','B')<<'\n';
+    Student student1;
+    student1.name = "Frost Fern";
+    student1.age = 87;
+    student1.gpa = 0.5;
+    std::cout<<"Name: "<<student1.name<<'\n';
+    std::cout<<"Age: "<<student1.age<<'\n';
+    std::cout<<"GPA: "<<student1.gpa<<'\n';
+    std::cout<<'\n';
+    Student student2;
+    student2.name = "Byte Crafter";
+    student2.age = 7;
+    student2.gpa = 9.5;
+    std::cout<<"Name: "<<student2.name<<'\n';
+    std::cout<<"Age: "<<student2.age<<'\n';
+    std::cout<<"GPA: "<<student2.gpa<<'\n';
     return 0;
 }
