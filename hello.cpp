@@ -309,27 +309,57 @@
 // }
 
 // Struct
+// #include <iostream>
+// struct Student{
+//     std::string name;
+//     int age;
+//     double gpa;
+// };
+// int main(){
+//     Student student1;
+//     student1.name = "Frost Fern";
+//     student1.age = 87;
+//     student1.gpa = 0.5;
+//     std::cout<<"Name: "<<student1.name<<'\n';
+//     std::cout<<"Age: "<<student1.age<<'\n';
+//     std::cout<<"GPA: "<<student1.gpa<<'\n';
+//     std::cout<<'\n';
+//     Student student2;
+//     student2.name = "Byte Crafter";
+//     student2.age = 7;
+//     student2.gpa = 9.5;
+//     std::cout<<"Name: "<<student2.name<<'\n';
+//     std::cout<<"Age: "<<student2.age<<'\n';
+//     std::cout<<"GPA: "<<student2.gpa<<'\n';
+//     return 0;
+// }
+
+// Pass Struct as argument
 #include <iostream>
-struct Student{
-    std::string name;
-    int age;
-    double gpa;
+void printCar(struct car &car);
+void paintCar(struct car &car , std::string colour);
+struct car{
+    std::string model;
+    int year;
+    std::string color;
 };
 int main(){
-    Student student1;
-    student1.name = "Frost Fern";
-    student1.age = 87;
-    student1.gpa = 0.5;
-    std::cout<<"Name: "<<student1.name<<'\n';
-    std::cout<<"Age: "<<student1.age<<'\n';
-    std::cout<<"GPA: "<<student1.gpa<<'\n';
+    car car1 = {"BMW", 2021, "Black"};
+    car car2 = {"Audi", 2020, "White"};
+
+    paintCar(car1,"Red"); //Change the color of car1
     std::cout<<'\n';
-    Student student2;
-    student2.name = "Byte Crafter";
-    student2.age = 7;
-    student2.gpa = 9.5;
-    std::cout<<"Name: "<<student2.name<<'\n';
-    std::cout<<"Age: "<<student2.age<<'\n';
-    std::cout<<"GPA: "<<student2.gpa<<'\n';
+
+    printCar(car1);
+    std::cout<<'\n';
+    printCar(car2);
     return 0;
+}
+void printCar(struct car &car){
+    std::cout<<"Model: "<<car.model<<'\n';
+    std::cout<<"Year: "<<car.year<<'\n';
+    std::cout<<"Color: "<<car.color<<'\n';
+}
+void paintCar(struct car &car , std::string colour){
+    car.color = colour;
 }
