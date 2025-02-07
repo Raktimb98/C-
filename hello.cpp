@@ -402,30 +402,51 @@
 // }
 
 //Object Oriented Programming
+// #include <iostream>
+// class Human{
+//     public:
+//     std::string name;
+//     std::string occupation;
+//     int age;
+//     void sleep(){
+//         std::cout<<"This Person is sleeping\n";
+//     }
+//     void eat(){
+//         std::cout<<"This Person is eating\n";
+//     }
+//     void talk(){
+//         std::cout<<"This Person is talking\n";
+//     }
+// };
+// int main(){
+//     Human human1;
+//     human1.name = "Frost Fern";
+//     human1.occupation = "Software Developer";
+//     human1.age = 87;
+//     std::cout<<"Name: "<<human1.name<<'\n';
+//     std::cout<<"Occupation: "<<human1.occupation<<'\n';
+//     std::cout<<"Age: "<<human1.age<<'\n';
+//     human1.sleep();
+//     return 0;
+// }
+
+//Constructor
 #include <iostream>
-class Human{
+class Student{
     public:
     std::string name;
-    std::string occupation;
     int age;
-    void sleep(){
-        std::cout<<"This Person is sleeping\n";
-    }
-    void eat(){
-        std::cout<<"This Person is eating\n";
-    }
-    void talk(){
-        std::cout<<"This Person is talking\n";
+    double gpa;
+    Student(std::string name, int age, double gpa){
+        this->name = name;
+        this->age = age;
+        this->gpa = gpa;
     }
 };
 int main(){
-    Human human1;
-    human1.name = "Frost Fern";
-    human1.occupation = "Software Developer";
-    human1.age = 87;
-    std::cout<<"Name: "<<human1.name<<'\n';
-    std::cout<<"Occupation: "<<human1.occupation<<'\n';
-    std::cout<<"Age: "<<human1.age<<'\n';
-    human1.sleep();
+    Student student1("Frost Fern", 87, 0.5);
+    std::cout<<"Name: "<<student1.name<<'\n';
+    std::cout<<"Age: "<<student1.age<<'\n';
+    std::cout<<"GPA: "<<student1.gpa<<'\n';
     return 0;
 }
