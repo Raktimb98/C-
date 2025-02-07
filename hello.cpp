@@ -366,37 +366,66 @@
 
 //Enums
 //Enums = a set of named integer constants
-#include <iostream>
-enum Day {Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6, Sunday = 0};
-int main(){
-    Day today = Monday;
-    switch (today)
-    {
-    case Sunday:
-        std::cout<<"Today is Sunday";
-        break;
-    case Monday:
-        std::cout<<"Today is Monday";
-        break;
-    case Tuesday:
-        std::cout<<"Today is Tuesday";
-        break;
-    case Wednesday:
-        std::cout<<"Today is Wednesday";
-        break;
-    case Thursday:
-        std::cout<<"Today is Thursday";
-        break;
-    case Friday:
-        std::cout<<"Today is Friday";
-        break;
-    case Saturday:
-        std::cout<<"Today is Saturday";
-        break;
+// #include <iostream>
+// enum Day {Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6, Sunday = 0};
+// int main(){
+//     Day today = Monday;
+//     switch (today)
+//     {
+//     case Sunday:
+//         std::cout<<"Today is Sunday";
+//         break;
+//     case Monday:
+//         std::cout<<"Today is Monday";
+//         break;
+//     case Tuesday:
+//         std::cout<<"Today is Tuesday";
+//         break;
+//     case Wednesday:
+//         std::cout<<"Today is Wednesday";
+//         break;
+//     case Thursday:
+//         std::cout<<"Today is Thursday";
+//         break;
+//     case Friday:
+//         std::cout<<"Today is Friday";
+//         break;
+//     case Saturday:
+//         std::cout<<"Today is Saturday";
+//         break;
     
-    default:
-        std::cout<<"Invalid day";
-        break;
+//     default:
+//         std::cout<<"Invalid day";
+//         break;
+//     }
+//     return 0;
+// }
+
+//Object Oriented Programming
+#include <iostream>
+class Human{
+    public:
+    std::string name;
+    std::string occupation;
+    int age;
+    void sleep(){
+        std::cout<<"This Person is sleeping\n";
     }
+    void eat(){
+        std::cout<<"This Person is eating\n";
+    }
+    void talk(){
+        std::cout<<"This Person is talking\n";
+    }
+};
+int main(){
+    Human human1;
+    human1.name = "Frost Fern";
+    human1.occupation = "Software Developer";
+    human1.age = 87;
+    std::cout<<"Name: "<<human1.name<<'\n';
+    std::cout<<"Occupation: "<<human1.occupation<<'\n';
+    std::cout<<"Age: "<<human1.age<<'\n';
+    human1.sleep();
     return 0;
 }
