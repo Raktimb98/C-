@@ -335,31 +335,68 @@
 // }
 
 // Pass Struct as argument
+// #include <iostream>
+// void printCar(struct car &car);
+// void paintCar(struct car &car , std::string colour);
+// struct car{
+//     std::string model;
+//     int year;
+//     std::string color;
+// };
+// int main(){
+//     car car1 = {"BMW", 2021, "Black"};
+//     car car2 = {"Audi", 2020, "White"};
+
+//     paintCar(car1,"Red"); //Change the color of car1
+//     std::cout<<'\n';
+
+//     printCar(car1);
+//     std::cout<<'\n';
+//     printCar(car2);
+//     return 0;
+// }
+// void printCar(struct car &car){
+//     std::cout<<"Model: "<<car.model<<'\n';
+//     std::cout<<"Year: "<<car.year<<'\n';
+//     std::cout<<"Color: "<<car.color<<'\n';
+// }
+// void paintCar(struct car &car , std::string colour){
+//     car.color = colour;
+// }
+
+//Enums
+//Enums = a set of named integer constants
 #include <iostream>
-void printCar(struct car &car);
-void paintCar(struct car &car , std::string colour);
-struct car{
-    std::string model;
-    int year;
-    std::string color;
-};
+enum Day {Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6, Sunday = 0};
 int main(){
-    car car1 = {"BMW", 2021, "Black"};
-    car car2 = {"Audi", 2020, "White"};
-
-    paintCar(car1,"Red"); //Change the color of car1
-    std::cout<<'\n';
-
-    printCar(car1);
-    std::cout<<'\n';
-    printCar(car2);
+    Day today = Monday;
+    switch (today)
+    {
+    case Sunday:
+        std::cout<<"Today is Sunday";
+        break;
+    case Monday:
+        std::cout<<"Today is Monday";
+        break;
+    case Tuesday:
+        std::cout<<"Today is Tuesday";
+        break;
+    case Wednesday:
+        std::cout<<"Today is Wednesday";
+        break;
+    case Thursday:
+        std::cout<<"Today is Thursday";
+        break;
+    case Friday:
+        std::cout<<"Today is Friday";
+        break;
+    case Saturday:
+        std::cout<<"Today is Saturday";
+        break;
+    
+    default:
+        std::cout<<"Invalid day";
+        break;
+    }
     return 0;
-}
-void printCar(struct car &car){
-    std::cout<<"Model: "<<car.model<<'\n';
-    std::cout<<"Year: "<<car.year<<'\n';
-    std::cout<<"Color: "<<car.color<<'\n';
-}
-void paintCar(struct car &car , std::string colour){
-    car.color = colour;
 }
