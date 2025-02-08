@@ -476,21 +476,44 @@
 // }
 
 //Getter and Setter
+// #include <iostream>
+// class Stove{
+//     private:
+//         int temperature;
+//     public:
+//         int getTemperature(){ //Getter
+//             return temperature;
+//         }
+//     void setTemperature(int temperature){ //Setter
+//         this->temperature = temperature;
+//     }
+// };
+// int main(){
+//     Stove stove;
+//     stove.setTemperature(200);
+//     std::cout<<"Temperature: "<<stove.getTemperature()<<'\n';
+//     return 0;
+// }
+
+//Inheritance
 #include <iostream>
-class Stove{
-    private:
-        int temperature;
+class Animal{
     public:
-        int getTemperature(){ //Getter
-            return temperature;
-        }
-    void setTemperature(int temperature){ //Setter
-        this->temperature = temperature;
+        bool alive = true;
+    void eat(){
+        std::cout<<"This animal is eating\n";
+    }
+};
+class Dog : public Animal{
+    public:
+    void bark(){
+        std::cout<<"This dog is barking\n";
     }
 };
 int main(){
-    Stove stove;
-    stove.setTemperature(200);
-    std::cout<<"Temperature: "<<stove.getTemperature()<<'\n';
+    Dog dog;
+    std::cout<<dog.alive<<'\n';
+    dog.eat();
+    dog.bark();
     return 0;
 }
