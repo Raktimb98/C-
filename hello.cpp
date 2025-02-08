@@ -452,25 +452,45 @@
 // }
 
 //Constructor Overloading
+// #include <iostream>
+// class pizza{
+//     public:
+//     std::string topping1;
+//     std::string topping2;
+//     pizza(){}
+//     pizza(std::string topping1){
+//         this->topping1 = topping1;
+//     }
+//     pizza(std::string topping1, std::string topping2){
+//         this->topping1 = topping1;
+//         this->topping2 = topping2;
+//     }
+// };
+// int main(){
+//     pizza pizza1("Cheese");
+//     pizza pizza2("Cheese","Tomato");
+//     pizza pizza3;
+//     std::cout<<"Pizza 1: "<<pizza1.topping1<<'\n';
+//     std::cout<<"Pizza 2: "<<pizza2.topping2<<'\n';
+//     return 0;
+// }
+
+//Getter and Setter
 #include <iostream>
-class pizza{
+class Stove{
+    private:
+        int temperature;
     public:
-    std::string topping1;
-    std::string topping2;
-    pizza(){}
-    pizza(std::string topping1){
-        this->topping1 = topping1;
-    }
-    pizza(std::string topping1, std::string topping2){
-        this->topping1 = topping1;
-        this->topping2 = topping2;
+        int getTemperature(){ //Getter
+            return temperature;
+        }
+    void setTemperature(int temperature){ //Setter
+        this->temperature = temperature;
     }
 };
 int main(){
-    pizza pizza1("Cheese");
-    pizza pizza2("Cheese","Tomato");
-    pizza pizza3;
-    std::cout<<"Pizza 1: "<<pizza1.topping1<<'\n';
-    std::cout<<"Pizza 2: "<<pizza2.topping2<<'\n';
+    Stove stove;
+    stove.setTemperature(200);
+    std::cout<<"Temperature: "<<stove.getTemperature()<<'\n';
     return 0;
 }
