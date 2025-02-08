@@ -431,22 +431,46 @@
 // }
 
 //Constructor
+// #include <iostream>
+// class Student{
+//     public:
+//     std::string name;
+//     int age;
+//     double gpa;
+//     Student(std::string name, int age, double gpa){
+//         this->name = name;
+//         this->age = age;
+//         this->gpa = gpa;
+//     }
+// };
+// int main(){
+//     Student student1("Frost Fern", 87, 0.5);
+//     std::cout<<"Name: "<<student1.name<<'\n';
+//     std::cout<<"Age: "<<student1.age<<'\n';
+//     std::cout<<"GPA: "<<student1.gpa<<'\n';
+//     return 0;
+// }
+
+//Constructor Overloading
 #include <iostream>
-class Student{
+class pizza{
     public:
-    std::string name;
-    int age;
-    double gpa;
-    Student(std::string name, int age, double gpa){
-        this->name = name;
-        this->age = age;
-        this->gpa = gpa;
+    std::string topping1;
+    std::string topping2;
+    pizza(){}
+    pizza(std::string topping1){
+        this->topping1 = topping1;
+    }
+    pizza(std::string topping1, std::string topping2){
+        this->topping1 = topping1;
+        this->topping2 = topping2;
     }
 };
 int main(){
-    Student student1("Frost Fern", 87, 0.5);
-    std::cout<<"Name: "<<student1.name<<'\n';
-    std::cout<<"Age: "<<student1.age<<'\n';
-    std::cout<<"GPA: "<<student1.gpa<<'\n';
+    pizza pizza1("Cheese");
+    pizza pizza2("Cheese","Tomato");
+    pizza pizza3;
+    std::cout<<"Pizza 1: "<<pizza1.topping1<<'\n';
+    std::cout<<"Pizza 2: "<<pizza2.topping2<<'\n';
     return 0;
 }
